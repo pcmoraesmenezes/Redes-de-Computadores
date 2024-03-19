@@ -60,3 +60,37 @@ Essas redes são chamadas de "passivas" porque não requerem energia ou eletrôn
 
 
 Os terminais de rede óptica, também conhecidos como ONTs (Optical Network Terminals), são dispositivos utilizados em redes ópticas passivas (PONs - Passive Optical Networks) para fornecer serviços de comunicação, como acesso à internet, televisão por assinatura e telefonia, aos assinantes finais.
+
+O atraso pode ser definido como:
+
+$$ D_{fim a fim} = \frac{L}{R} \times N$$
+
+Onde:
+
+- $D_{fim a fim}$ Representa o atraso fim-a-fim, ou seja, o tempo total que leva para uma mensagem ou pacote de dados percorrer toda a rede, desde o ponto de origem até o ponto de destino.
+
+- $N$ Representa o número de nós (ou dispositivos de rede) que o pacote de dados atravessa durante sua jornada pela rede. Isso inclui roteadores, switches, servidores e outros dispositivos de rede que processam ou encaminham o pacote.
+
+- $L$ Representa o tamanho do pacote de dados, geralmente medido em bits ou bytes. Esse é o tamanho do pacote que está sendo transmitido pela rede.
+
+- $R$  Representa a taxa de transmissão ou taxa de dados da rede, geralmente medida em bits por segundo (bps). Essa é a velocidade com que os dados são transmitidos pela rede.
+
+Ex:
+
+Considerando um pacote de 1024 Bytes, qual seria o atraso de transmissão do
+mesmo em um link de 2Mbps?
+
+$$ D_{fim a fim} = \frac{L}{R} \times N$$
+
+$$ D_{fim a fim} = \frac{1024 \times 8}{2 \times 10^6} \times 1$$
+
+$$ D_{fim a fim} = \frac{8192}{2 \times 10^6} \times 1$$
+
+$$ D_{fim a fim} = 0,004096s$$
+
+O atraso de transmissão é de 0,004096s ou 4,096ms.
+
+Perda de pacote -> o espaço do buffer é finito, um pacote que está chegando pode encontrá-lo
+lotado de outros que estão esperando transmissão. Nesse caso, ocorrerá uma perda de pacote — um pacote que
+está chegando ou um dos que já estão na fila é descartado
+
